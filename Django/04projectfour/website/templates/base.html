@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/basestyles.css' %}">
+<h1> Header for this page </h1>
+<body>
+  <p><a href='/'>My personal blog</a><p>
+</body>
+
+
+<div class="container">
+  {% block content%}
+  {% endblock content %}
+</div>
