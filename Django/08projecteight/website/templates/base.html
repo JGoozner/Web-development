@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/basestyles.css' %}">
+<h1> Header for this page </h1>
+<body>
+  <p><a href='/'>My personal blog</a><p>
+</body>
+
+
+<div class="container">
+
+  {% if user.is_authenticated %}
+      <p> You are logged in </p>
+      <p>{{user.username}}</p>
+      <a href="{% url 'logout' %}">Logout here</a>
+  {% else %}
+  <a href="{% url 'login' %}">Please log in </a>
+  {% endif %}
+
+  {% block content%}
+  {% endblock content %}
+</div>
