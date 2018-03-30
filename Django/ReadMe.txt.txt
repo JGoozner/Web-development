@@ -1,1 +1,0 @@
-Where I store all my projects for Django
